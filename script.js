@@ -1,23 +1,36 @@
-const parolaScelta = prompt("Inserisci una parola:");
+//! IS PALINDROME?
+
+const chosenWord = prompt("Enter a word");
 
 /**
- * funziane che controlla se la parola fornita è palindroma 
-     split('') trasforma "radar" in ["r", "a", "d", "a", "r"]
-     reverse() inverte l'array
-     join('') lo riporta a stringa "radar" 
- * @param {string} parola 
+ * function that checks whether the given word is a palindrome 
+     split('') change "radar" in ["r", "a", "d", "a", "r"]
+     reverse() reverses the array
+     join('') return the string to "radar" 
+ * @param {string} word 
  * @returns {boolean}
  */
-function isPalindroma(parola) {
-  let parolaInvertita = parola.split("").reverse().join("");
+function isPalindroma(word) {
+  let reversedWord = word.split("").reverse().join("");
 
-  if (parola === parolaInvertita) {
+  if (word === reversedWord) {
     return true;
   }
   return false;
 }
-if (isPalindroma(parolaScelta)) {
-  console.log(`La parola: ${parolaScelta} è palindroma`);
+
+
+if (isPalindroma(chosenWord)) {
+  console.log(`The word: ${chosenWord} is a palindrome`);
 } else {
-  console.log(`La parola: ${parolaScelta} NON è palindroma`);
+  console.log(`The word: ${chosenWord} is not a palindrome`);
 }
+
+
+//! EVEN OR ODD
+
+const sceltaUtente = prompt("Choose even or odd?")
+const numeroUtente = prompt("Choose a number from 1 to 5?")
+
+/** */
+function 
