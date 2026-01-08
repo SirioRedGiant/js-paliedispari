@@ -29,8 +29,16 @@ if (isPalindroma(chosenWord)) {
 
 //! EVEN OR ODD
 
-const sceltaUtente = prompt("Choose even or odd?")
-const numeroUtente = prompt("Choose a number from 1 to 5?")
+const userChoice = prompt("Choose even or odd?")
+const userNumber = prompt("Choose a number from 1 to 5?")
 
-/** */
-function 
+/** 
+ **      This function generates a random integer between 1 and 5 (inclusive)
+ **      Math.random(): Generates a random decimal number between 0 (inclusive) and 1 (exclusive). For example: 0.1234... or 0.9876....
+ *       * 5: Multiply that number by 5. The result will be a decimal between 0 and 4,999....
+ **      Math.floor(...): Rounds the number down to the nearest integer. This then transforms the range into whole numbers: 0, 1, 2, 3, 4
+ **      + 1: Moves the range forward by one. So, instead of 0-4, you get a number between 1 and 5
+*/
+function randomNumGenerator() {
+    return Math.floor(Math.random() * 5) + 1;
+}
