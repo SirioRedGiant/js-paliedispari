@@ -1,6 +1,5 @@
 const parolaScelta = prompt("Inserisci una parola:");
 
-// 2. Definizione della funzione
 /**
  * funziane che controlla se la parola fornita è palindroma 
      split('') trasforma "radar" in ["r", "a", "d", "a", "r"]
@@ -14,9 +13,8 @@ function isPalindroma(parola) {
 
   if (parola === parolaInvertita) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 if (isPalindroma(parolaScelta)) {
   console.log(`La parola: ${parolaScelta} è palindroma`);
