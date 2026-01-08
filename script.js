@@ -48,7 +48,7 @@ const pickedNumbSum = userNumber + computerNumb;
 /**
  * FUNCTION THAT CHECKS IF THE SUM IS EVEN OR ODD
  * I use the "%" property to check when the parameter is even
- * @param {number} sumNumeral 
+ * @param {number} sumNumeral
  * @returns {string}
  */
 function evenOrOddChecker(sumNumeral) {
@@ -58,6 +58,16 @@ function evenOrOddChecker(sumNumeral) {
   return "odd";
 }
 
-const sumResult = evenOrOddChecker(pickedNumbSum)
+const sumResult = evenOrOddChecker(pickedNumbSum);
 
+// The winner is...
 
+if (sumResult === userChoice) {
+  console.log(
+    `the sum is (${pickedNumbSum}, so ${sumResult}. Player win, congratulation!`
+  );
+} else {
+  console.log(
+    `the sum is ${pickedNumbSum}, so ${sumResult}. Loser, try again, maybe you'll be luckier `
+  );
+}
