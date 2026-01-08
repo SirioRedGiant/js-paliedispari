@@ -21,16 +21,24 @@ function isPalindroma(word) {
   return false;
 }
 
+
+// PALINDROME OR NOT PALINDROME THIS IS THE DILEMMA
+
 if (isPalindroma(chosenWord)) {
   console.log(`The word: ${chosenWord} is a palindrome`);
 } else {
   console.log(`The word: ${chosenWord} is not a palindrome`);
 }
 
+
+
 //! EVEN OR ODD
 // .trim() and .toLowerCase() prevent "Even " or "EVEN" from failing the check
 const userChoice = prompt("Choose even or odd?").trim().toLowerCase();
+
+// We use parseInt to transform the text "3" into the number 3
 const userNumber = parseInt(prompt("Choose a number from 1 to 5?"));
+
 
 /**
  **      This function generates a random integer between 1 and 5 (inclusive)
@@ -44,7 +52,9 @@ function randomNumGenerator() {
   return Math.floor(Math.random() * 5) + 1;
 }
 
+// Executing the function and saving the value
 const computerNumber = randomNumGenerator();
+
 const pickedNumbSum = userNumber + computerNumber;
 
 /**
@@ -60,6 +70,7 @@ function evenOrOddChecker(sumNumeral) {
   return "odd";
 }
 
+// Running the function on the sum and saving the result
 const sumResult = evenOrOddChecker(pickedNumbSum);
 
 // The winner is...
