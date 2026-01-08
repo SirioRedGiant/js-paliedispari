@@ -1,19 +1,21 @@
 //! IS PALINDROME?
 
-const chosenWord = prompt("Enter a word");
+const chosenWord = prompt("Enter a word").trim();
 
 /**
- * function that checks whether the given word is a palindrome 
-     split('') change "radar" in ["r", "a", "d", "a", "r"]
-     reverse() reverses the array
-     join('') return the string to "radar" 
- * @param {string} word 
+ * function that checks whether the given word is a palindrome
+ *    toLowercase() ensures "Radar" and "radar" matches
+ *    split('') change "radar" in ["r", "a", "d", "a", "r"]
+ *    reverse() reverses the array
+ *    join('') return the string to "radar"
+ * @param {string} word
  * @returns {boolean}
  */
 function isPalindroma(word) {
-  let reversedWord = word.split("").reverse().join("");
+  const cleanWord = word.toLowerCase();
+  const reversedWord = cleanWord.split("").reverse().join("");
 
-  if (word === reversedWord) {
+  if (cleanWord === reversedWord) {
     return true;
   }
   return false;
@@ -26,8 +28,8 @@ if (isPalindroma(chosenWord)) {
 }
 
 //! EVEN OR ODD
-
-const userChoice = prompt("Choose even or odd?").toLowerCase();
+// .trim() and .toLowerCase() prevent "Even " or "EVEN" from failing the check
+const userChoice = prompt("Choose even or odd?").trim().toLowerCase();
 const userNumber = parseInt(prompt("Choose a number from 1 to 5?"));
 
 /**
@@ -42,8 +44,8 @@ function randomNumGenerator() {
   return Math.floor(Math.random() * 5) + 1;
 }
 
-const computerNumb = randomNumGenerator();
-const pickedNumbSum = userNumber + computerNumb;
+const computerNumber = randomNumGenerator();
+const pickedNumbSum = userNumber + computerNumber;
 
 /**
  * FUNCTION THAT CHECKS IF THE SUM IS EVEN OR ODD
