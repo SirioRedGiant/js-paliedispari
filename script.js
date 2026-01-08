@@ -19,18 +19,16 @@ function isPalindroma(word) {
   return false;
 }
 
-
 if (isPalindroma(chosenWord)) {
   console.log(`The word: ${chosenWord} is a palindrome`);
 } else {
   console.log(`The word: ${chosenWord} is not a palindrome`);
 }
 
-
 //! EVEN OR ODD
 
-const userChoice = prompt("Choose even or odd?").toLowerCase()
-const userNumber = parseInt(prompt("Choose a number from 1 to 5?"))
+const userChoice = prompt("Choose even or odd?").toLowerCase();
+const userNumber = parseInt(prompt("Choose a number from 1 to 5?"));
 
 /**
  **      This function generates a random integer between 1 and 5 (inclusive)
@@ -41,15 +39,25 @@ const userNumber = parseInt(prompt("Choose a number from 1 to 5?"))
  * @returns {number}
  */
 function randomNumGenerator() {
-    return Math.floor(Math.random() * 5) + 1;
+  return Math.floor(Math.random() * 5) + 1;
 }
 
+const computerNumb = randomNumGenerator();
+const pickedNumbSum = userNumber + computerNumb;
 
-const computerNumb = randomNumGenerator()
+/**
+ * FUNCTION THAT CHECKS IF THE SUM IS EVEN OR ODD
+ * I use the "%" property to check when the parameter is even
+ * @param {number} sumNumeral 
+ * @returns {string}
+ */
+function evenOrOddChecker(sumNumeral) {
+  if (sumNumeral % 2 === 0) {
+    return "even";
+  }
+  return "odd";
+}
 
-
-const 
-
-
+const sumResult = evenOrOddChecker(pickedNumbSum)
 
 
