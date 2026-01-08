@@ -24,27 +24,32 @@
 
 ## Input dell'utente
 -  chiedere all'utente: "Scegli pari o dispari?" e lo salvo come sceltaUtente
--  chiedere all'utente: "Scegli un numero da 1 a 5?" e lo salvo come numeroUtente
+-  chiedere all'utente: "Scegli un numero da 1 a 5?" e lo salvo come numeroUtente dopo averlo convertito in un numero intero da stringa
 
 ## Prima funzione per il computer
 -  Creo una funzione che genera un numero casuale tra 1 e 5.
+function generaRandom() {
+    return numero casuale tra 1 e 5
+}
 -  salvo il risultato come numeroComputer
 
 *  Calcolo della somma
 -  sommaNumeri = numeroUtente + numeroComputer
 
 ## Funzione che verifica che la somma sia pari o dispari
--  creo una funzione che prende la sommaNumeri
+-  function controllaPariDispari(numero) {
 -       If sommaNumeri % 2 == 0:
             RESTITUISCO la parola è pari
         RESTITUISCO la parola è dispari
+}
 - il risultato della funzione la salvo come risultatoSomma
 
 
 #### DICHIARARE IL VINCITORE:
--   If risultatoSomma === sceltaUtente
+-   STAMPA "Il computer ha scelto " + numeroComputer + ", la somma è " + sommaNumeri
+    If risultatoSomma === sceltaUtente
         STAMPA "Hai vinto!"
     ALTRIMENTI
-        STAMPA "il computer ha vinto"
+        STAMPA "Il computer ha vinto"
 
 
